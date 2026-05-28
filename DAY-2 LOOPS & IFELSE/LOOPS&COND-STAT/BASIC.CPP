@@ -1,119 +1,325 @@
-/*1. Conditional Statements
-Conditional statements are used to make decisions in our code based on whether a given condition evaluates to true (yes) or false (no) [01:25].
+/*
+==========================================================
+               1. CONDITIONAL STATEMENTS
+==========================================================
 
-A. The if and if-else Statements
-Used to execute a block of code only if a specific condition is met. If the condition is false, the else block executes.*/
+Conditional statements are used to make decisions
+in our program.
 
-#include <iostream>
-using namespace std;
+They check whether a condition is:
 
-int main() {
-    int age = 20;
-
-    if (age >= 18) {
-        cout << "You are eligible to vote.\n";
-    } else {
-        cout << "You are not eligible to vote.\n";
-    }
-    return 0;
-}
-
-
-/*B. The if-else if-else Ladder
-Used when we have multiple sequential conditions to check.*/
-#include <iostream>
-using namespace std;
-
-int main() {
-    int n = -5;
-
-    if (n > 0) {
-        cout << "n is positive\n"; [00:07:11]
-    } else if (n < 0) {
-        cout << "n is negative\n"; [00:06:59]
-    } else {
-        cout << "n is zero\n";
-    }
-    return 0;
-}
-
-
-
-
-/*2. Loops in C++
-Loops are used to execute a block of code repeatedly until a specific condition becomes false.
-
-A. while Loop
-The while loop checks the condition before executing the loop body. Use it when the number of iterations is not known beforehand.*/
-
-while (condition) {
-    // code block
-    // update expression
-}
-
-// Example: Print numbers from 1 to 5
-#include <iostream>
-using namespace std;
-
-int main() {
-    int count = 1;
-    while (count <= 5) {
-        cout << count << " ";
-        count++;
-    }
-    return 0;
-}
-
-
-/*B. for Loop
-The for loop groups initialization, condition, and update expressions together in a single line. It is ideal when you know exactly how many times the loop should run.
-
-Syntax:
-
-C++*/
-for (initialization; condition; update) {
-    // code block
-}
-
-// Example: Print numbers from 1 to 5
-
-#include <iostream>
-using namespace std;
-
-int main() {
-    for (int i = 1; i <= 5; i++) {
-        cout << i << " ";
-    }
-    return 0;
-}
-
-/*C. do-while Loop
-The do-while loop executes the code block at least once before checking the condition because the condition is evaluated at the end.
-
-Syntax:
-
-C++*/
-do {
-    // code block
-} while (condition);
-
-
-
-/*3. Nested Loops
-A loop inside another loop is called a nested loop. They are commonly used for working with multi-dimensional spaces, matrices, or generating patterns [01:34:14].
+TRUE  → Execute one block of code
+FALSE → Execute another block of code
 
 Example:
+If age is greater than or equal to 18,
+the user can vote.
 
-C++*/
+*/
+
+
+/*
+==========================================================
+             A. IF AND IF-ELSE STATEMENT
+==========================================================
+
+The if statement executes code only when
+a condition becomes true.
+
+The else block executes when the condition
+becomes false.
+
+Syntax:
+
+if(condition)
+{
+    // Code executes if condition is true
+}
+else
+{
+    // Code executes if condition is false
+}
+
+*/
+
+
 #include <iostream>
 using namespace std;
 
-int main() {
-    for (int i = 1; i <= 3; i++) { // Outer Loop
-        for (int j = 1; j <= 3; j++) { // Inner Loop
+int main()
+{
+    // Variable declaration
+    int age = 20;
+
+    // Checking voting eligibility
+    if (age >= 18)
+    {
+        cout << "You are eligible to vote.\n";
+    }
+    else
+    {
+        cout << "You are not eligible to vote.\n";
+    }
+
+    return 0;
+}
+
+
+/*
+==========================================================
+          B. IF - ELSE IF - ELSE LADDER
+==========================================================
+
+Used when multiple conditions need to be checked.
+
+Program flow:
+1. First if condition is checked.
+2. If false, else if condition is checked.
+3. If all conditions are false,
+   else block executes.
+
+Syntax:
+
+if(condition1)
+{
+    // Code
+}
+else if(condition2)
+{
+    // Code
+}
+else
+{
+    // Code
+}
+
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n = -5;
+
+    // Check if number is positive
+    if (n > 0)
+    {
+        cout << "n is positive\n";
+    }
+
+    // Check if number is negative
+    else if (n < 0)
+    {
+        cout << "n is negative\n";
+    }
+
+    // If neither positive nor negative
+    else
+    {
+        cout << "n is zero\n";
+    }
+
+    return 0;
+}
+
+
+/*
+==========================================================
+                    2. LOOPS IN C++
+==========================================================
+
+Loops are used to repeat a block of code
+multiple times until a condition becomes false.
+
+Types of Loops:
+1. while loop
+2. for loop
+3. do-while loop
+
+*/
+
+
+/*
+==========================================================
+                  A. WHILE LOOP
+==========================================================
+
+The while loop checks the condition FIRST.
+
+If condition = true
+→ Loop executes
+
+If condition = false
+→ Loop stops
+
+Used when number of iterations
+is NOT known beforehand.
+
+Syntax:
+
+while(condition)
+{
+    // Code block
+
+    // Update expression
+}
+
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Initialization
+    int count = 1;
+
+    // Loop runs until count <= 5
+    while (count <= 5)
+    {
+        cout << count << " ";
+
+        // Update expression
+        count++;
+    }
+
+    return 0;
+}
+
+
+/*
+==========================================================
+                    B. FOR LOOP
+==========================================================
+
+The for loop combines:
+
+1. Initialization
+2. Condition
+3. Update
+
+in a single line.
+
+Used when number of iterations
+is known beforehand.
+
+Syntax:
+
+for(initialization; condition; update)
+{
+    // Code block
+}
+
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Print numbers from 1 to 5
+    for (int i = 1; i <= 5; i++)
+    {
+        cout << i << " ";
+    }
+
+    return 0;
+}
+
+
+/*
+==========================================================
+                 C. DO-WHILE LOOP
+==========================================================
+
+The do-while loop executes the code
+AT LEAST ONCE.
+
+Why?
+
+Because condition is checked AFTER
+execution.
+
+Syntax:
+
+do
+{
+    // Code block
+}
+while(condition);
+
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int number = 1;
+
+    do
+    {
+        cout << number << " ";
+
+        number++;
+    }
+    while (number <= 5);
+
+    return 0;
+}
+
+
+/*
+==========================================================
+                   3. NESTED LOOPS
+==========================================================
+
+A loop inside another loop is called
+a Nested Loop.
+
+Uses:
+- Pattern printing
+- Matrices
+- Multi-dimensional problems
+
+Outer Loop:
+Controls number of rows
+
+Inner Loop:
+Controls number of columns
+
+Example:
+Print a 3 × 3 star pattern
+
+* * *
+* * *
+* * *
+
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Outer loop → Rows
+    for (int i = 1; i <= 3; i++)
+    {
+        // Inner loop → Columns
+        for (int j = 1; j <= 3; j++)
+        {
             cout << "* ";
         }
+
+        // Move to next line
         cout << "\n";
     }
+
     return 0;
 }
