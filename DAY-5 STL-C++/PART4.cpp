@@ -38,7 +38,6 @@ Everything is already included.
 
 */
 
-
 /*
 ==========================================================
                     2. SORTING
@@ -65,37 +64,34 @@ Range:
 
 */
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    int arr[] =
-    {
-        1,
-        5,
-        3,
-        2
-    };
+  int arr[] =
+      {
+          1,
+          5,
+          3,
+          2};
 
-    // Sort array
-    sort(arr, arr + 4);
+  // Sort array
+  sort(arr, arr + 4);
 
-    /*
-    Sorted Array:
-    {1, 2, 3, 5}
-    */
+  /*
+  Sorted Array:
+  {1, 2, 3, 5}
+  */
 
-    for (int i = 0; i < 4; i++)
-    {
-        cout << arr[i]
-             << " ";
-    }
+  for (int i = 0; i < 4; i++)
+  {
+    cout << arr[i]
+         << " ";
+  }
 
-    return 0;
+  return 0;
 }
-
 
 /*
 ==========================================================
@@ -111,31 +107,29 @@ using namespace std;
 
 int main()
 {
-    vector<int> v =
-    {
-        9,
-        3,
-        1,
-        7,
-        5
-    };
+  vector<int> v =
+      {
+          9,
+          3,
+          1,
+          7,
+          5};
 
-    sort(v.begin(), v.end());
+  sort(v.begin(), v.end());
 
-    /*
-    Sorted:
-    {1, 3, 5, 7, 9}
-    */
+  /*
+  Sorted:
+  {1, 3, 5, 7, 9}
+  */
 
-    for (auto element : v)
-    {
-        cout << element
-             << " ";
-    }
+  for (auto element : v)
+  {
+    cout << element
+         << " ";
+  }
 
-    return 0;
+  return 0;
 }
-
 
 /*
 ==========================================================
@@ -156,32 +150,30 @@ using namespace std;
 
 int main()
 {
-    int arr[] =
-    {
-        9,
-        8,
-        7,
-        2,
-        1
-    };
+  int arr[] =
+      {
+          9,
+          8,
+          7,
+          2,
+          1};
 
-    // Sort index 2 → 4
-    sort(arr + 2, arr + 5);
+  // Sort index 2 → 4
+  sort(arr + 2, arr + 5);
 
-    /*
-    Result:
-    {9, 8, 1, 2, 7}
-    */
+  /*
+  Result:
+  {9, 8, 1, 2, 7}
+  */
 
-    for (int element : arr)
-    {
-        cout << element
-             << " ";
-    }
+  for (int element : arr)
+  {
+    cout << element
+         << " ";
+  }
 
-    return 0;
+  return 0;
 }
-
 
 /*
 ==========================================================
@@ -203,32 +195,30 @@ using namespace std;
 
 int main()
 {
-    vector<int> v =
-    {
-        5,
-        1,
-        8,
-        3
-    };
+  vector<int> v =
+      {
+          5,
+          1,
+          8,
+          3};
 
-    sort(v.begin(),
-         v.end(),
-         greater<int>());
+  sort(v.begin(),
+       v.end(),
+       greater<int>());
 
-    /*
-    Result:
-    {8, 5, 3, 1}
-    */
+  /*
+  Result:
+  {8, 5, 3, 1}
+  */
 
-    for (auto element : v)
-    {
-        cout << element
-             << " ";
-    }
+  for (auto element : v)
+  {
+    cout << element
+         << " ";
+  }
 
-    return 0;
+  return 0;
 }
-
 
 /*
 ==========================================================
@@ -257,7 +247,6 @@ Sort pairs such that:
 
 */
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -266,54 +255,52 @@ bool customComparator(
     pair<int, int> p1,
     pair<int, int> p2)
 {
-    // Increasing order of second
-    if (p1.second < p2.second)
-    {
-        return true;
-    }
+  // Increasing order of second
+  if (p1.second < p2.second)
+  {
+    return true;
+  }
 
-    if (p1.second > p2.second)
-    {
-        return false;
-    }
-
-    /*
-    If second elements equal
-    */
-
-    // Descending order of first
-    if (p1.first > p2.first)
-    {
-        return true;
-    }
-
+  if (p1.second > p2.second)
+  {
     return false;
+  }
+
+  /*
+  If second elements equal
+  */
+
+  // Descending order of first
+  if (p1.first > p2.first)
+  {
+    return true;
+  }
+
+  return false;
 }
 
 int main()
 {
-    pair<int, int> arr[] =
-    {
-        {1, 2},
-        {2, 1},
-        {4, 1}
-    };
+  pair<int, int> arr[] =
+      {
+          {1, 2},
+          {2, 1},
+          {4, 1}};
 
-    sort(arr,
-         arr + 3,
-         customComparator);
+  sort(arr,
+       arr + 3,
+       customComparator);
 
-    for (auto pairValue : arr)
-    {
-        cout << pairValue.first
-             << " "
-             << pairValue.second
-             << endl;
-    }
+  for (auto pairValue : arr)
+  {
+    cout << pairValue.first
+         << " "
+         << pairValue.second
+         << endl;
+  }
 
-    return 0;
+  return 0;
 }
-
 
 /*
 ==========================================================
@@ -349,7 +336,6 @@ Correct order:
 
 */
 
-
 /*
 ==========================================================
            4. BUILT-IN BIT FUNCTIONS
@@ -376,22 +362,20 @@ Total set bits = 3
 
 */
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    int num = 7;
+  int num = 7;
 
-    int count =
-    __builtin_popcount(num);
+  int count =
+      __builtin_popcount(num);
 
-    cout << count;
+  cout << count;
 
-    return 0;
+  return 0;
 }
-
 
 /*
 ==========================================================
@@ -413,17 +397,16 @@ using namespace std;
 
 int main()
 {
-    long long number =
-    12345678912345;
+  long long number =
+      12345678912345;
 
-    int count =
-    __builtin_popcountll(number);
+  int count =
+      __builtin_popcountll(number);
 
-    cout << count;
+  cout << count;
 
-    return 0;
+  return 0;
 }
-
 
 /*
 ==========================================================
@@ -466,35 +449,30 @@ false → No permutation left
 
 */
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    string s = "123";
+  string s = "123";
 
-    // Always sort first
-    sort(s.begin(),
-         s.end());
+  // Always sort first
+  sort(s.begin(),
+       s.end());
 
-    do
-    {
-        cout << s
-             << endl;
-    }
+  do
+  {
+    cout << s
+         << endl;
+  }
 
-    while
-    (
-        next_permutation(
-            s.begin(),
-            s.end()
-        )
-    );
+  while (
+      next_permutation(
+          s.begin(),
+          s.end()));
 
-    return 0;
+  return 0;
 }
-
 
 /*
 ==========================================================
@@ -509,7 +487,6 @@ int main()
 321
 
 */
-
 
 /*
 ==========================================================
@@ -570,56 +547,50 @@ Array/Vector MUST be sorted.
 
 */
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    vector<int> v =
-    {
-        10,
-        20,
-        30,
-        40
-    };
+  vector<int> v =
+      {
+          10,
+          20,
+          30,
+          40};
 
-    // Reverse
-    reverse(v.begin(),
-            v.end());
+  // Reverse
+  reverse(v.begin(),
+          v.end());
 
-    for (auto element : v)
-    {
-        cout << element
-             << " ";
-    }
+  for (auto element : v)
+  {
+    cout << element
+         << " ";
+  }
 
-    cout << endl;
+  cout << endl;
 
-    // Maximum Element
-    cout << *max_element(
-                v.begin(),
-                v.end()
-            )
-         << endl;
+  // Maximum Element
+  cout << *max_element(
+              v.begin(),
+              v.end())
+       << endl;
 
-    // Minimum Element
-    cout << *min_element(
-                v.begin(),
-                v.end()
-            )
-         << endl;
+  // Minimum Element
+  cout << *min_element(
+              v.begin(),
+              v.end())
+       << endl;
 
-    // Binary Search
-    cout << binary_search(
-                v.begin(),
-                v.end(),
-                20
-            );
+  // Binary Search
+  cout << binary_search(
+      v.begin(),
+      v.end(),
+      20);
 
-    return 0;
+  return 0;
 }
-
 
 /*
 ==========================================================
@@ -640,11 +611,5 @@ Topics Completed:
 ✔ binary_search()
 
 🎉 COMPLETE STL FINISHED
-
-You are now ready to start:
-1. STL Practice Questions
-2. DSA with STL
-3. LeetCode / Coding Problems
-
 ==========================================================
 */
