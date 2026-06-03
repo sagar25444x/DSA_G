@@ -569,7 +569,7 @@ int main()
          << " ";
   }
 
-  cout << endl;
+  cout << endl
 
   // Maximum Element
   cout << *max_element(
